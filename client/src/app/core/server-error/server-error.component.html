@@ -1,6 +1,7 @@
 <div class="container mt-5">
    <h4>Internal Server Error - refreshing the page will make the exception disappear</h4>
-<h5 class="text-danger">Error: {{error.Message}}</h5>
+<ng-container *ngIf="error">
+    <h5 class="text-danger">Error: {{error.Message}}</h5>
 <p class="font-weight-bold">Note: if you are sessing this then Angular is probably not responsible</p>
 <p>What to do next?</p>
 <ol>
@@ -14,4 +15,6 @@
     <p>Following is the stack trace - this is where you investigation should start !</p>
     <code class="mt-5" style="background-color:whitesmoke;">{{error.Details}}</code>
 </ol>
+</ng-container>
+   
 </div>
